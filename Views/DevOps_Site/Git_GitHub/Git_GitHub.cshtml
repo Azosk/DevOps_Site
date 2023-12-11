@@ -1,0 +1,146 @@
+@{
+    ViewData["Title"] = "Git & GitHub";
+}
+<div  style="border: 2px solid black; overflow: auto;" class="text-center">
+    <br>
+    <h1 style="background-color:white;" class="display-4"><u>Git & GitHub</u></h1>
+    <br>
+    <br>
+    <div class="col-lg-6" style="  border-top: 10px solid black;width:auto;display:flex;background:rgb(2, 46, 61);">
+        <div class="p-4 d-flex flex-column position-static" style="width: 100%; height: 100%;">
+            <div class="card mb-12" style="width: 100%; height: 100%;">
+                <div style="overflow: auto" class="card-body">
+                    <h1 class="display-6">Welcome to ASP.NET DevOps: Git & GitHub</h1>
+                    <div class="row">
+                        <div style="border: 2px solid black;width:100%" class="col-md-4">
+                            <h5 class="card-title">What is Git & GitHub?</h5>
+                            <p style="max-width:auto;" class="card-text">
+                                Git is a distributed version control system that allows you to track changes in your
+                                code and collaborate with other developers. GitHub is a web-based platform that hosts
+                                Git repositories and provides additional features such as issue tracking, code review,
+                                and project management. In this page, you will learn how to use Git and GitHub for your
+                                ASP.NET web projects.
+                            </p>
+                            <p>Learn more about Version Control Systems: <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/GitHub">MDN Site</a></p>
+                            <br>
+                            <br>
+                        </div>
+                        <div style="border: 2px solid black;width:100%" class="col-md-4">
+                            <h5 class="card-title">Getting Started with Git:</h5>
+                            <p style="max-width:auto;" class="card-text">
+                                Git is a command-line tool that you can use to perform various operations on your code,
+                                such as creating branches, committing changes, merging conflicts, and pushing or pulling 
+                                from remote repositories. Git has a simple and intuitive syntax that makes it easy to 
+                                learn and use. To get started with Git, you need to install it on your computer and 
+                                configure it with your name and email address.
+                            </p>
+                            <p>Learn more about Git: <a href="https://git-scm.com/">Git Website</a></p>                           
+                            <br>
+                            <br>
+                        </div>
+                        <div style="border: 2px solid black;width:100%" class="col-md-4">
+                            <h5 class="card-title">Getting Started with GitHub:</h5>
+                            <p style="max-width:auto;" class="card-text">
+                                GitHub is the largest and most popular platform for hosting and managing Git
+                                repositories. You can use GitHub to store your code online, share it with other
+                                developers, and access it from any device. GitHub also integrates with many IDEs such 
+                                as Visual Studio and VS Code, allowing you to perform Git operations from within your 
+                                development environment. To get started with GitHub, you need to create an account and 
+                                a repository for your project.
+                            </p>
+                            <p>Learn more about GitHub: <a href="https://github.com/">GitHub Website</a></p>
+                            <br>
+                            <br>
+                        </div>
+                        <div style="width:100%;border: 2px solid black;" class="col-md-4">
+                            <h5 class="card-title">What are Repositories?</h5>
+                            <p style="max-width:auto;" class="card-text">
+                                A repository is a collection of files and folders that represents your project. You can 
+                                create a repository on your local machine or on a remote server such as GitHub. A 
+                                repository contains a .git folder that stores the history and metadata of your project. 
+                                You can also clone or fork existing repositories from other sources to work on them or 
+                                contribute to them. To see an example of an enterprise-level code in action, you can check 
+                                out this repository that contains the Open Source Entity Core code which is used in many
+                                enterprise grade solutions..
+                            </p>
+                            <p>Checkout the Entity Core Repository: <a href="https://github.com/dotnet/efcore">Entity Core</a></p>
+                            <br>
+                            <br>
+                        </div>
+                        <div style="width:100%;border: 2px solid black;" class="col-md-4">
+                            <h5 class="card-title">Git Workflow:</h5>
+                            <p style="max-width:auto;" class="card-text">
+                                To get started integrating Git into your workflow, there are a few necessary commands to learn. Git
+                                commands are the instructions that you can use to interact with your Git repositories. You 
+                                can type these commands in your terminal or command prompt to perform various operations on 
+                                your code, such as creating branches, committing changes, merging conflicts, and pushing or 
+                                pulling from remote repositories. Here are some of the most common and useful Git commands 
+                                that you need to get started with Git and GitHub: <ul> <li><code>git init</code>: This 
+                                command creates a new Git repository in your current directory. It initializes a .git folder 
+                                that stores the history and metadata of your project.</li> <li><code>git clone</code>: This 
+                                command copies an existing Git repository from a remote server to your local machine. You can 
+                                specify the URL of the repository that you want to clone, such as <code>git clone    
+                                https://github.com/dotnet/EntityCore.git</code>.</li> <li><code>git status</code>: This command 
+                                shows the current state of your working directory and staging area, which is essentially a cache of project changes. It tells you which files 
+                                are modified, untracked, or staged for the next commit.</li> <li><code>git add</code>: This 
+                                command adds the changes in your working directory to the staging area. You can specify the 
+                                files or directories that you want to add, such as <code>git add index.html</code> or <code>git 
+                                add .</code> to add all the changes in the current directory to the staging area.</li> <li><code>git commit</code>: This command creates 
+                                a copy of the files within the staging area as a new commit in your local repository. You can provide a 
+                                message that describes the changes, such as <code>git commit -m “Add homepage”</code>. A 
+                                commit is a snapshot of your project at a specific point in time.</li> <li><code>git 
+                                push</code>: This command transfers the commits from your local repository to a remote 
+                                repository. You can specify the remote and the branch that you want to push, such as <code>git 
+                                push origin master</code>. This command updates the remote repository with your local
+                                changes.</li> <li><code>git pull</code>: This command fetches the changes from a remote 
+                                repository and merges them with your local branch. You can specify the remote and the branch 
+                                that you want to pull, such as <code>git pull origin master</code>. This command updates your 
+                                local repository with the remote changes.</li> <li><code>git branch</code>: This command lists 
+                                the branches in your local repository. A branch is a pointer to a commit that represents a 
+                                different version of your project. You can create, delete, or rename branches with this command, 
+                                such as <code>git branch feature</code> or <code>git branch -d feature</code>. The branch with 
+                                a star (*) next to it is the current branch.</li> <li><code>git checkout</code>: This command 
+                                switches to a different branch in your local repository. You can specify the branch that you 
+                                want to switch to, such as <code>git checkout feature</code>. This command also updates your 
+                                working directory and staging area to match the branch that you checked out.</li> <li>
+                                <code>git merge</code>: This command combines the changes from two branches into one. You can 
+                                specify the branch that you want to merge into the current branch, such as <code>git merge 
+                                feature</code>. This command creates a new commit that contains the merged changes, unless there 
+                                are conflicts that need to be resolved.</li> </ul> 
+                                <p>For more Git commands and their usage, you can refer to the 
+                                <a href="https://training.github.com/">[Git Cheat Sheet]</a> or the <a href="https://git-scm.com/doc">[Git Documentation]</a>.</p>
+                            <br>
+                        </div>
+                        <div style="width:100%;border: 2px solid black;" class="col-md-4">
+                            <h5 class="card-title">Git & GitHub with IDEs:</h5>
+                            <p> IDEs are integrated development environments that provide various tools and features to help you 
+                                write, debug, and run your code. Some of the most popular IDEs for web development are Visual 
+                                Studio and VS Code, which are both developed by Microsoft. It is also worthy of note that GitHub 
+                                is currently owned by Microsoft, which means these technologies share high interopability with 
+                                technologies like <a asp-controller="DevOps_Site" asp-action="Azure">Azure</a>. These IDEs also support 
+                                Git and GitHub integration, which means that you can perform Git operations from within your 
+                                development environment, without using the command line. Here are some of the benefits and features 
+                                of using Git and GitHub with these IDEs: <ul><li>Visual Studio: Visual Studio is a powerful 
+                                and comprehensive IDE that supports a wide range of languages, frameworks, and platforms for web 
+                                development, such as ASP.NET, C#, HTML, CSS, JavaScript, and more. Visual Studio also has a 
+                                built-in Team Explorer that allows you to manage your Git repositories, branches, commits, and pull 
+                                requests. You can also connect to your GitHub account and access your GitHub repositories, issues, 
+                                and actions from within Visual Studio.</li><li>VS Code: VS Code is a lightweight and versatile code 
+                                editor that supports many languages, extensions, and themes for web development, such as HTML, 
+                                CSS, JavaScript, Python, PHP, and more. VS Code also has a built-in Source Control panel that 
+                                allows you to perform basic Git operations, such as staging, committing, pushing, and pulling. 
+                                You can also install the GitHub Pull Requests and Issues extension that enables you to review 
+                                and manage your GitHub pull requests and issues from within VS Code.</li></ul> <p>Using Git and 
+                                GitHub with these IDEs can help you improve your workflow, productivity, and collaboration for your 
+                                web projects. You can also explore other IDEs and extensions that support Git and GitHub integration, 
+                                such as Atom, Sublime Text, Eclipse, and IntelliJ IDEA.
+                                </p> 
+                                <p>Click here to see some practical scripts that can be ran alongside with these IDEs: <a asp-controller="DevOps_Site" asp-action="Scripts">Scripts</a></p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

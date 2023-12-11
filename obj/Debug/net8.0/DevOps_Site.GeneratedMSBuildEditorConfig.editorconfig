@@ -1,0 +1,67 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DevOps_Site
+build_property.RootNamespace = DevOps_Site
+build_property.ProjectDir = C:\Users\azosk\OneDrive\Desktop\WDI_Project_Design\DevOps_WorkSpace\DevOps_Site\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\azosk\OneDrive\Desktop\WDI_Project_Design\DevOps_WorkSpace\DevOps_Site
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/azosk/OneDrive/Desktop/WDI_Project_Design/DevOps_WorkSpace/DevOps_Site/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azosk/OneDrive/Desktop/WDI_Project_Design/DevOps_WorkSpace/DevOps_Site/Views/DevOps_Site/APIs/APIs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2T3BzX1NpdGVcQVBJc1xBUElzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azosk/OneDrive/Desktop/WDI_Project_Design/DevOps_WorkSpace/DevOps_Site/Views/DevOps_Site/Azure/Azure.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2T3BzX1NpdGVcQXp1cmVcQXp1cmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azosk/OneDrive/Desktop/WDI_Project_Design/DevOps_WorkSpace/DevOps_Site/Views/DevOps_Site/Git_GitHub/Git_GitHub.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2T3BzX1NpdGVcR2l0X0dpdEh1YlxHaXRfR2l0SHViLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azosk/OneDrive/Desktop/WDI_Project_Design/DevOps_WorkSpace/DevOps_Site/Views/DevOps_Site/Scripts/Scripts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2T3BzX1NpdGVcU2NyaXB0c1xTY3JpcHRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azosk/OneDrive/Desktop/WDI_Project_Design/DevOps_WorkSpace/DevOps_Site/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azosk/OneDrive/Desktop/WDI_Project_Design/DevOps_WorkSpace/DevOps_Site/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azosk/OneDrive/Desktop/WDI_Project_Design/DevOps_WorkSpace/DevOps_Site/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azosk/OneDrive/Desktop/WDI_Project_Design/DevOps_WorkSpace/DevOps_Site/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azosk/OneDrive/Desktop/WDI_Project_Design/DevOps_WorkSpace/DevOps_Site/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azosk/OneDrive/Desktop/WDI_Project_Design/DevOps_WorkSpace/DevOps_Site/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azosk/OneDrive/Desktop/WDI_Project_Design/DevOps_WorkSpace/DevOps_Site/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-85rna160qv
