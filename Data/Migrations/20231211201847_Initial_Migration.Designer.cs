@@ -3,6 +3,7 @@ using System;
 using DevOps_Site.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,74 +11,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DevOps_Site.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231211201847_Initial_Migration")]
+    partial class Initial_Migration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.0");
-
-            modelBuilder.Entity("DevOps_Site.Models.Author", b =>
-                {
-                    b.Property<int>("AuthorID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("JoinDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("AuthorID");
-
-                    b.ToTable("Authors");
-                });
-
-            modelBuilder.Entity("DevOps_Site.Models.Script", b =>
-                {
-                    b.Property<int>("ScriptID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Author")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("AuthorDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("AuthorID")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("ScriptContent")
-                        .IsRequired()
-                        .HasMaxLength(1200)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ScriptDescription")
-                        .IsRequired()
-                        .HasMaxLength(300)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ScriptName")
-                        .IsRequired()
-                        .HasMaxLength(35)
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("ScriptID");
-
-                    b.HasIndex("AuthorID");
-
-                    b.ToTable("Scripts");
-                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -275,13 +216,6 @@ namespace DevOps_Site.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("DevOps_Site.Models.Script", b =>
-                {
-                    b.HasOne("DevOps_Site.Models.Author", null)
-                        .WithMany("Scripts")
-                        .HasForeignKey("AuthorID");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -331,11 +265,6 @@ namespace DevOps_Site.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("DevOps_Site.Models.Author", b =>
-                {
-                    b.Navigation("Scripts");
                 });
 #pragma warning restore 612, 618
         }

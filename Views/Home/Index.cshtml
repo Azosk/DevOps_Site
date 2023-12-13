@@ -36,18 +36,45 @@
                                                 using ASP.NET. APIs are the backbone of modern web development, as they allow you
                                                 to expose and access data and functionality across different applications and platforms.
                                             </p>
-                                            <p>Go to APIs Page</p>
+                                            <a asp-controller="DevOps_Site" asp-action="APIs">APIs</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card mb-4" style="border: 2px solid black;height: 100%;">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Scripts</h5>
+                                        <div style="text:center;overflow:auto;" class="card-body">
+                                            <h5 style="text-align:center;" class="card-title">Scripts</h5>
                                             <p class="card-text">
-                                                Placeholder
+                                                <table class="table" style="margin-left:auto;margin-right:auto;width:100%;height:auto;border:2px solid black;">
+                                                    <tr style="border:2px solid black;">
+                                                        <td style="border:2px solid black;">Name</td>
+                                                        <td style="border:2px solid black;">Author</td>
+                                                    </tr>   
+                                                    @if(Model != null)
+                                                    {
+                                                        @foreach (var script in Model)
+                                                        {                                                
+                                                            var ID = script.ScriptID;
+
+                                                                <tr style="border:2px solid black;">
+                                                                    <td style="border:2px solid black;">@script.ScriptName</td>
+                                                                    <td style="border:2px solid black;">@script.Author</td>
+                                                                </tr>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        <tr>
+
+                                                                <td style="border:2px solid black;">N/A</td>
+                                                                <td style="border:2px solid black;">N/A</td>
+                                                                <td style="border:2px solid black;">N/A</td>
+                                                                <td style="border:2px solid black;">N/A</td>
+                                                                <td style="border:2px solid black;">N/A</td>
+                                                        </tr>
+                                                    }
+                                                </table>
                                             </p>
-                                            <p>Go to Scripts Page</p>
                                         </div>
                                     </div>
                                 </div>

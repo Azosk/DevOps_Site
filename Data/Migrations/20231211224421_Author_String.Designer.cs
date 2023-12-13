@@ -3,6 +3,7 @@ using System;
 using DevOps_Site.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DevOps_Site.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231211224421_Author_String")]
+    partial class Author_String
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.0");
@@ -47,20 +50,11 @@ namespace DevOps_Site.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Author")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<DateTime>("AuthorDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("AuthorID")
+                    b.Property<int>("AuthorID")
                         .HasColumnType("INTEGER");
-
-                    b.Property<string>("ScriptContent")
-                        .IsRequired()
-                        .HasMaxLength(1200)
-                        .HasColumnType("TEXT");
 
                     b.Property<string>("ScriptDescription")
                         .IsRequired()
@@ -277,9 +271,13 @@ namespace DevOps_Site.Data.Migrations
 
             modelBuilder.Entity("DevOps_Site.Models.Script", b =>
                 {
-                    b.HasOne("DevOps_Site.Models.Author", null)
+                    b.HasOne("DevOps_Site.Models.Author", "Author")
                         .WithMany("Scripts")
-                        .HasForeignKey("AuthorID");
+                        .HasForeignKey("AuthorID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

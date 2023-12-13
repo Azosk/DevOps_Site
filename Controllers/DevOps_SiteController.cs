@@ -1,6 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using DevOps_Site.Models;
+using Microsoft.AspNetCore.Authorization;
+using DevOps_Site.Data;
 
 namespace DevOps_Site.Controllers;
 
@@ -10,14 +12,22 @@ public class DevOps_SiteController : Controller
 {
     private readonly ILogger<DevOps_SiteController> _logger;
 
-    public DevOps_SiteController(ILogger<DevOps_SiteController> logger)
+    private readonly ApplicationDbContext _context;
+
+    public DevOps_SiteController(ILogger<DevOps_SiteController> logger, ApplicationDbContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
     [HttpGet]
-    public IActionResult Index()
+    public IActionResult OnGet()
     {
+        var scripts = _context.Scripts.AsEnumerable();
+        if (_context.Scripts.Any())
+        {
+            return View("Views/Home/Index.cshtml", scripts);
+        }
         return View("Views/Home/Index.cshtml");
     }
 
@@ -30,12 +40,6 @@ public class DevOps_SiteController : Controller
     public IActionResult APIs()
     {
         return View("Views/DevOps_Site/APIs/APIs.cshtml");
-    }
-    
-    [HttpGet("Scripts")]
-    public IActionResult Scripts()
-    {
-        return View("Views/DevOps_Site/Scripts/Scripts.cshtml");
     }
 
     [HttpGet("Azure")]

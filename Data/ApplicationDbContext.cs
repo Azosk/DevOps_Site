@@ -9,4 +9,8 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+
+    public DbSet<DevOps_Site.Models.Author> Authors { get; set; }
+    public DbSet<DevOps_Site.Models.Script> Scripts { get; set; }
+
 }

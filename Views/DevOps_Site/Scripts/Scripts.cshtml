@@ -1,17 +1,37 @@
 @{
     ViewData["Title"] = "Home page";
+    @model IEnumerable<DevOps_Site.Models.Script>
 }
 <div  style="border: 2px solid black; overflow: auto;" class="text-center">
     <br>
     <h1 class="display-4"><u>Script</u></h1>
     <br>
-    <label>Filter Results</label><input></input>
+    <form method="get" asp-controller="DevOps_Site" asp-action="Scripts">
+        <p>
+            Scripts: <input type="text" name="searchString" />
+            <input type="submit" value="Filter" />
+            <button><a asp-controller="DevOps_Site" asp-action"Scripts">Cancel Filter</a></button>
+        </p>
+    </form> 
+    <form method="get" asp-controller="DevOps_Site" asp-action="Scripts">
+        
+            Sort by: <select name="sortOrder">
+            <option value="">None</option>
+            <option value="Newest">Newest</option>
+            <option value="Oldest">Oldest</option>
+            </select>
+            <input type="submit" value="Filter">
+        </input>
+    </form>
+    <br>
+    <br>
+    <p>To create your own script, click here! <button><a href="/DevOps_Site/Scripts/Create">Create Script</a></button> </p>
     <br>
     <br>
         <div class="col-lg-6" style="  border-top: 10px solid black;width:auto;display:flex;background:rgb(2, 46, 61);">
             <div class="p-4 d-flex flex-column position-static" style="width: 100%; height: 100%;">
                 <div class="card mb-12" style="width: 100%; height: 100%;">
-                    <div style="overflow: auto" class="card-body">
+                    <div style="overflow: auto;" class="card-body">
                         <h1 class="display-6">Welcome to ASP.NET DevOps: A Practical Guide</h1>
                         <div class="row">
                             <div style="width:100%" class="col-md-4">
@@ -20,30 +40,41 @@
                                         <tr style="border:2px solid black;">
                                             <th>Script Name</th>
                                             <th>Description</th>
-                                            <th>Date Made</th>
-                                            <th>Date last modified</th>
                                             <th>Author</th>
+                                            <th>Date Created</th>
+                                            <th>Options</th>
                                         </tr>
-                                        <tr style="border:2px solid black;">
-                                            <td>Entity_Script</td>
-                                            <td>Installs Entity Packages</td>
-                                            <td>11/1/2023</td>
-                                            <td>11/1/2023</td>
-                                            <td>Thomas Neider</td>                                            </tr>
-                                        <tr style="border:2px solid black;">
-                                            <td>WebApp_Script</td>
-                                            <td>Sets up Web App</td>
-                                            <td>11/1/2023</td>
-                                            <td>11/1/2023</td>
-                                            <td>Thomas Neider</td>
-                                        </tr>
-                                        <tr style="border:2px solid black;">
-                                            <td>Identity_Script</td>
-                                            <td>Creates Web App with Identity</td>
-                                            <td>11/1/2023</td>
-                                            <td>11/1/2023</td>
-                                            <td>Thomas Neider</td>
-                                        </tr>
+                                        @if(Model != null)
+                                        {
+                                            foreach (var script in Model)
+                                            {                                                
+                                                var ID = script.ScriptID;
+                                                <tr style="border:2px solid black;">
+
+                                                    <td style="border:2px solid black;">@script.ScriptName</td>
+                                                    <td style="border:2px solid black;">@script.ScriptDescription</td>
+                                                    <td style="border:2px solid black;">@script.Author</td>
+                                                    <td style="border:2px solid black;">@script.AuthorDate</td>
+                                                    <td style="border:2px solid black;">
+                                                        <a href="/DevOps_Site/Scripts/Delete/@ID">Delete</a>
+                                                        <a href="/DevOps_Site/Scripts/Details/@ID">Details</a>
+                                                        <a href="/DevOps_Site/Scripts/Edit/@ID">Edit</a>
+                                                    </td>
+
+                                                </tr>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <tr>
+
+                                                    <td style="border:2px solid black;">N/A</td>
+                                                    <td style="border:2px solid black;">N/A</td>
+                                                    <td style="border:2px solid black;">N/A</td>
+                                                    <td style="border:2px solid black;">N/A</td>
+                                                    <td style="border:2px solid black;">N/A</td>
+                                            </tr>
+                                        }
                                     </table>
                                 </p>
                             </div>

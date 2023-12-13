@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@model DevOps_Site.Models.Script;
+
+<div  style="border: 2px solid black; overflow: auto;" class="text-center">
+    <br>
+    <h1 class="display-4"><u>Edit</u></h1>
+    <br>
+    <br>
+        <div class="col-lg-6" style="border-top: 10px solid black;width:auto;display:flex;background:rgb(2, 46, 61);">
+            <div class="p-4 d-flex flex-column position-static" style="width: 100%; height: 100%;">
+                <div class="card mb-12" style="width: 100%; height: 100%;">
+                    <div style="overflow: auto" class="card-body">
+                        <h1 class="display-6">Welcome to ASP.NET DevOps: Edit a Script</h1>
+                        <div class="row">
+                                <form method="post" asp-controller="Script" asp-action="Script_Edit" >
+                                    <label asp-for="ScriptName">Script Name</label>
+                                    <input asp-for="ScriptName" class="form-control" />
+                                    <span asp-validation-for="ScriptName" class="text-danger"></span>
+                                    <br>
+                                    <label asp-for="ScriptDescription">Script Description</label>
+                                    <input asp-for="ScriptDescription" class="form-control" />
+                                    <span asp-validation-for="ScriptDescription" class="text-danger"></span>
+                                    <br>
+                                    <label asp-for="ScriptContent">Script Content</label>
+                                    <br>
+                                    <textarea style="width:100%;height:100%;" type="text" id="ScriptContent" name="ScriptContent" asp-for="ScriptContent"></textarea>
+                                    <br>
+                                    <input type="hidden" asp-for="Author" value="@Environment.UserName" />
+                                    <input type="hidden" asp-for="Author" value="@DateTime.Now" />
+                                    <input type="hidden" asp-for="ScriptID" value="@Model.ScriptID">
+
+                                    <button type="submit" class="btn btn-primary">Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
