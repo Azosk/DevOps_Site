@@ -14,7 +14,9 @@ Microsoft.EntityFrameworkCore.Sqlite | Version="8.0.0"
 Microsoft.EntityFrameworkCore.Tools | Version="8.0.0"  
 
 ## Usage
-To start the application, run: `dotnet watch run`
+To start the application, run: `dotnet watch run`  
+This applicaiton is a Web Application that uses technologies such as Identity, EF Core, ASP.NET, and more!  
+In the application there are web pages describing methods for ways to integrate these technologies into your own applications.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
