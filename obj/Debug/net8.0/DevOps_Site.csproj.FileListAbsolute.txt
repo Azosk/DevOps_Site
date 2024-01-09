@@ -378,6 +378,7 @@ C:\Users\azosk\OneDrive\Desktop\WDI_Project_Design\Final_Project\DevOps_Site\obj
 C:\Users\azosk\OneDrive\Desktop\WDI_Project_Design\Final_Project\DevOps_Site\obj\Debug\net8.0\DevOps_Site.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\azosk\OneDrive\Desktop\WDI_Project_Design\Final_Project\DevOps_Site\obj\Debug\net8.0\DevOps_Site.RazorAssemblyInfo.cache
 C:\Users\azosk\OneDrive\Desktop\WDI_Project_Design\Final_Project\DevOps_Site\obj\Debug\net8.0\DevOps_Site.RazorAssemblyInfo.cs
+C:\Users\azosk\OneDrive\Desktop\WDI_Project_Design\Final_Project\DevOps_Site\obj\Debug\net8.0\DevOps_Site.sourcelink.json
 C:\Users\azosk\OneDrive\Desktop\WDI_Project_Design\Final_Project\DevOps_Site\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\azosk\OneDrive\Desktop\WDI_Project_Design\Final_Project\DevOps_Site\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\azosk\OneDrive\Desktop\WDI_Project_Design\Final_Project\DevOps_Site\obj\Debug\net8.0\staticwebassets\msbuild.DevOps_Site.Microsoft.AspNetCore.StaticWebAssets.props

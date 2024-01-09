@@ -90,12 +90,12 @@ public class ScriptController : Controller
         _context.Scripts.Add(script);
         _context.SaveChanges();
         // Redirect to the script list or details page
-        return Redirect("http://localhost:5172/DevOps_Site/Scripts/");    
+        return Redirect("https://azosk.azurewebsites.net/DevOps_Site/Scripts");    
     }
     else
     {
         // If the model is invalid, return the same view with the model
-        return Redirect("http://localhost:5172//DevOps_Site/Scripts/Create.cshtml");
+        return Redirect("https://azosk.azurewebsites.net/DevOps_Site/Scripts/Create");
     }
     }
 
@@ -129,13 +129,17 @@ public class ScriptController : Controller
             var script = await _context.Scripts.FirstOrDefaultAsync(s => s.ScriptID == id);
             if (script != null)
             {
+                if (script.Author != User.Identity.Name)
+                {
+                    return Problem("You are not the author of this script");
+                }
                 _context.Scripts.Remove(script);
                 await _context.SaveChangesAsync();
                 // Redirect to the script list or details page
-                return Redirect("http://localhost:5172/DevOps_Site/Scripts/"); 
+                return Redirect("https://azosk.azurewebsites.net/DevOps_Site/Scripts"); 
             }
         }
-            return Redirect("http://localhost:5172/DevOps_Site/Scripts/"); 
+            return Redirect("https://azosk.azurewebsites.net/DevOps_Site/Scripts"); 
     }
 
     [HttpGet("/DevOps_Site/Scripts/Edit/{id}")]
@@ -183,11 +187,11 @@ public class ScriptController : Controller
             else
             {
                 // Redirect to the script list or details page
-                return Redirect("http://localhost:5172/DevOps_Site/Scripts/"); 
+                return Redirect("http://localhost:5172/DevOps_Site/Scripts"); 
             }
         }
         // Redirect to the script list or details page
-        return Redirect("http://localhost:5172/DevOps_Site/Scripts/"); 
+        return Redirect("https://azosk.azurewebsites.net/DevOps_Site/Scripts"); 
     }
 
     [HttpGet("/DevOps_Site/Scripts/Details/{id}")]
