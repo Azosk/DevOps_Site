@@ -1,34 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\azosk\\OneDrive\\Desktop\\WDI_Project_Design\\Final_Project\\DevOps_Site\\DevOps_Site.csproj": {}
+    "C:\\Users\\azosk\\source\\repos\\DevOps_Site\\DevOps_Site\\DevOps_Site.csproj": {}
   },
   "projects": {
-    "C:\\Users\\azosk\\OneDrive\\Desktop\\WDI_Project_Design\\Final_Project\\DevOps_Site\\DevOps_Site.csproj": {
+    "C:\\Users\\azosk\\source\\repos\\DevOps_Site\\DevOps_Site\\DevOps_Site.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\azosk\\OneDrive\\Desktop\\WDI_Project_Design\\Final_Project\\DevOps_Site\\DevOps_Site.csproj",
+        "projectUniqueName": "C:\\Users\\azosk\\source\\repos\\DevOps_Site\\DevOps_Site\\DevOps_Site.csproj",
         "projectName": "DevOps_Site",
-        "projectPath": "C:\\Users\\azosk\\OneDrive\\Desktop\\WDI_Project_Design\\Final_Project\\DevOps_Site\\DevOps_Site.csproj",
+        "projectPath": "C:\\Users\\azosk\\source\\repos\\DevOps_Site\\DevOps_Site\\DevOps_Site.csproj",
         "packagesPath": "C:\\Users\\azosk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\azosk\\OneDrive\\Desktop\\WDI_Project_Design\\Final_Project\\DevOps_Site\\obj\\",
+        "outputPath": "C:\\Users\\azosk\\source\\repos\\DevOps_Site\\DevOps_Site\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\azosk\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -28,7 +28,7 @@
                                     <br>
                                     <textarea style="width:100%;height:100%;" type="text" id="ScriptContent" name="ScriptContent" asp-for="ScriptContent"></textarea>
                                     <br>
-                                    <input type="hidden" asp-for="Author" value="@Environment.UserName" />
+                                    <input type="hidden" asp-for="Author" value="@User.Identity.Name" />
                                     <input type="hidden" asp-for="Author" value="@DateTime.Now" />
                                     <input type="hidden" asp-for="ScriptID" value="@Model.ScriptID">
 

@@ -79,6 +79,7 @@ public class ScriptController : Controller
     }
 
     [HttpPost]
+    [Authorize]
     public IActionResult Script_Create([FromForm] Script script)
     {
     // Validate the model
@@ -90,12 +91,12 @@ public class ScriptController : Controller
         _context.Scripts.Add(script);
         _context.SaveChanges();
         // Redirect to the script list or details page
-        return Redirect("https://azosk.azurewebsites.net/DevOps_Site/Scripts");    
+        return View("Views/DevOps_Site/Scripts/Scripts.cshtml", _context.Scripts);    
     }
     else
     {
         // If the model is invalid, return the same view with the model
-        return Redirect("https://azosk.azurewebsites.net/DevOps_Site/Scripts/Create");
+        return View("Views/DevOps_Site/Scripts/Create.cshtml");
     }
     }
 
@@ -121,6 +122,7 @@ public class ScriptController : Controller
     
     // POST: DevOps_Site/Script/Delete/5
     [HttpPost]
+    [Authorize]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Script_Delete([FromForm]int id)
     {
@@ -129,17 +131,19 @@ public class ScriptController : Controller
             var script = await _context.Scripts.FirstOrDefaultAsync(s => s.ScriptID == id);
             if (script != null)
             {
-                if (script.Author != User.Identity.Name)
+                if (User.Identity.Name != null)
                 {
-                    return Problem("You are not the author of this script");
+                    if (script.Author != User.Identity.Name)
+                    {
+                        return Problem("You are not the author of this script.");
+                    }
+                    _context.Scripts.Remove(script);
+                    await _context.SaveChangesAsync();
+                    // Redirect to the script list or details page
                 }
-                _context.Scripts.Remove(script);
-                await _context.SaveChangesAsync();
-                // Redirect to the script list or details page
-                return Redirect("https://azosk.azurewebsites.net/DevOps_Site/Scripts"); 
             }
         }
-            return Redirect("https://azosk.azurewebsites.net/DevOps_Site/Scripts"); 
+            return View("Views/DevOps_Site/Scripts/Scripts.cshtml", _context.Scripts); 
     }
 
     [HttpGet("/DevOps_Site/Scripts/Edit/{id}")]
@@ -164,34 +168,39 @@ public class ScriptController : Controller
     
     // POST: DevOps_Site/Script/Edit/5
     [HttpPost]
+    [Authorize]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Script_Edit([FromForm]Script editedScript)
     {
         if (ModelState.IsValid)
         {
-        var script = _context.Scripts.FirstOrDefault(s => s.ScriptID == editedScript.ScriptID);
+            var script = _context.Scripts.FirstOrDefault(s => s.ScriptID == editedScript.ScriptID);
             if (script != null)
             {
-                script.ScriptContent = editedScript.ScriptContent;
-                if(await TryUpdateModelAsync(script, "editedScript"))
+                if (script.Author != User.Identity.Name)
                 {
-                    _context.Entry(script).Property("ScriptContent").IsModified = true;
-                    await _context.SaveChangesAsync();
-                    return Redirect("http://localhost:5172/DevOps_Site/Scripts/");   
+                    return Problem("Only the Author may edit the script.");
                 }
                 else
                 {
-                    return View("Views/DevOps_Site/");
-                }   
-            }
-            else
-            {
-                // Redirect to the script list or details page
-                return Redirect("http://localhost:5172/DevOps_Site/Scripts"); 
+                    if (await TryUpdateModelAsync<Script>(script))
+                    {
+                        try
+                        {
+                            await _context.SaveChangesAsync();
+                            return View("Views/DevOps_Site/Scripts/Scripts.cshtml", _context.Scripts);   
+                        }
+                        catch (DbUpdateException)
+                        {
+                            Problem("DbUpdateException.");
+                        }
+                        return View("Views/DevOps_Site/Scripts/Scripts.cshtml", _context.Scripts);   
+                    }
+                }  
             }
         }
         // Redirect to the script list or details page
-        return Redirect("https://azosk.azurewebsites.net/DevOps_Site/Scripts"); 
+        return View("Views/DevOps_Site/Scripts/Scripts.cshtml", _context.Scripts); 
     }
 
     [HttpGet("/DevOps_Site/Scripts/Details/{id}")]

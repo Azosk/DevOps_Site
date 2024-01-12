@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H4Kze+mRi19CohCr9Fr43yxlbhtfhkUbka7zaSriqMDLlxFyp8l93QDB/IBFF4873wp0sCuTOPer93Rx62J6Rw==",
+  "dgSpecHash": "lMPoMJaybQhhHkOCzy8hDpHpBHnQ7pU4QYvWYC8ydXarPAMLYq9/ANMOOVETJaeQcCPnk0riwho4iGjE8k0fGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\azosk\\OneDrive\\Desktop\\WDI_Project_Design\\Final_Project\\DevOps_Site\\DevOps_Site.csproj",
+  "projectFilePath": "C:\\Users\\azosk\\source\\repos\\DevOps_Site\\DevOps_Site\\DevOps_Site.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\azosk\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\azosk\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.0\\microsoft.aspnetcore.cryptography.internal.8.0.0.nupkg.sha512",
